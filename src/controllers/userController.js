@@ -7,12 +7,12 @@ controller.index = (req,res) => {
 }
 
 controller.registerOrLogin = async (req,res) => {
-    const {name,password, technical} = req.body;
-    const user = await User.findOne({name: name,password: password}).exec();
+    const {name,email, technical} = req.body;
+    const user = await User.findOne({name: name,email: email}).exec();
     if (user == null) {
         const newUser = {
             name,
-            password,
+            email,
             technical
         }
         const createdUser = await User.create(newUser);

@@ -11,7 +11,7 @@ router.get('/users', userController.index);
  * "user": {
  * "_id": "Id",
  * "name": "string",
- * "password": "string",
+ * "email": "string",
  * "technical": boolean,
  * "__v": 0
  * }
